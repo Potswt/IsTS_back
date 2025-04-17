@@ -5,7 +5,7 @@ import Report from '../model/Report.js';
 import Notification from '../model/Notification.js';
 import { protect } from '../auth/middleware.js';
 import upload from '../middleware/multerConfig.js';
-import backendUrl from '../config/backendUrl.js';
+
 import dotenv from 'dotenv';
 
 dotenv.config();
