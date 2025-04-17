@@ -40,7 +40,7 @@ if (!fs.existsSync(chatUploadDir)) {
   fs.mkdirSync(chatUploadDir, { recursive: true });
 }
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
