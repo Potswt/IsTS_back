@@ -9,13 +9,11 @@ import fs from 'fs';
 import path from 'path';
 import mongoose from 'mongoose';
 import { sendMessage } from '../utils/lineNotification.js'; // เพิ่ม import ฟังก์ชันส่ง LINE
-import axios from 'axios';
-import { sendLineNotification } from '../utils/lineNotification.js';
+
 import dotenv from 'dotenv';
 
 dotenv.config();
 
-const backendUrl = process.env.API_BASE_URL || 5000; // ใช้พอร์ตที่คุณกำหนดใน .env
 const router = express.Router();
 
 // ตั้งค่าโฟลเดอร์สำหรับเก็บไฟล์แนบ (เช่น reports)
