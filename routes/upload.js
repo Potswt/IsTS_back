@@ -2,15 +2,14 @@ import express from 'express';
 import { protect } from '../auth/middleware.js';
 import { upload } from '../utils/multer.js'; // ใช้เส้นทางสัมพันธ์
 import path from 'path';
-import fs from 'fs';
+
 
 import dotenv from 'dotenv';
 dotenv.config();
 
-const backendUrl = process.env;
+
 
 const router = express.Router();
-const chatUploadDir = path.join(process.cwd(), 'uploads', 'chat');
 
 // อัปโหลดไฟล์สำหรับแชท
 router.post('/chat', protect, upload.single('file'), async (req, res) => {
