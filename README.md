@@ -79,14 +79,22 @@ IsTS (Issue Support and Tracking System) เป็นเว็บแอปพล
 
 3. สร้างไฟล์ `.env` ด้วยตัวแปรดังต่อไปนี้:
    ```
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   PORT=4000
-   API_BASE_URL=http://localhost:4000
-   EMAIL_USER=your_email@example.com
-   EMAIL_PASS=your_email_password
-   EMAIL_HOST=smtp.example.com
-   CHANNEL_ACCESS_TOKEN=your_line_channel_access_token
+MONGO_URI=mongodb+srv://[USERNAME]:[PASSWORD]@resper.nv96u.mongodb.net/?retryWrites=true&w=majority&appName=RESPER
+
+# JWT Configuration
+JWT_SECRET=[SECRET_KEY]
+JWT_EXPIRES_IN=24H
+JWT_REFRESH_SECRET=[REFRESH_SECRET_KEY]
+JWT_REFRESH_EXPIRES_IN=30d
+
+EMAIL_USER=[EMAIL]# เปลี่ยนเป็น Gmail จริงของคุณ
+EMAIL_PASS=[APP_PASSWORD]  # ใช้ App Password ที่ Google สร้างให้
+
+CHANNEL_SECRET=[LINE_CHANNEL_SECRET]
+CHANNEL_ACCESS_TOKEN=[LINE_CHANNEL_ACCESS_TOKEN]
+
+NODE_ENV=development
+API_BASE_URL=http://localhost:4000
    ```
 
 4. เริ่มเซิร์ฟเวอร์ backend:
