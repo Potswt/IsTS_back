@@ -78,23 +78,24 @@ IsTS (Issue Support and Tracking System) เป็นเว็บแอปพล
    ```
 
 3. สร้างไฟล์ `.env` ด้วยตัวแปรดังต่อไปนี้:
+
    ```
-MONGO_URI=mongodb+srv://[USERNAME]:[PASSWORD]@resper.nv96u.mongodb.net/?retryWrites=true&w=majority&appName=RESPER
+    MONGO_URI=your_mongodb_connection_string
 
-# JWT Configuration
-JWT_SECRET=[SECRET_KEY]
-JWT_EXPIRES_IN=24H
-JWT_REFRESH_SECRET=[REFRESH_SECRET_KEY]
-JWT_REFRESH_EXPIRES_IN=30d
+    # JWT Configuration
+    JWT_SECRET=[SECRET_KEY]
+    JWT_EXPIRES_IN=24H
+    JWT_REFRESH_SECRET=[REFRESH_SECRET_KEY]
+    JWT_REFRESH_EXPIRES_IN=30d
 
-EMAIL_USER=[EMAIL]# เปลี่ยนเป็น Gmail จริงของคุณ
-EMAIL_PASS=[APP_PASSWORD]  # ใช้ App Password ที่ Google สร้างให้
+    EMAIL_USER=[EMAIL]# เปลี่ยนเป็น Gmail จริงของคุณ
+    EMAIL_PASS=[APP_PASSWORD]  # ใช้ App Password ที่ Google สร้างให้
 
-CHANNEL_SECRET=[LINE_CHANNEL_SECRET]
-CHANNEL_ACCESS_TOKEN=[LINE_CHANNEL_ACCESS_TOKEN]
+    CHANNEL_SECRET=[LINE_CHANNEL_SECRET]
+    CHANNEL_ACCESS_TOKEN=[LINE_CHANNEL_ACCESS_TOKEN]
 
-NODE_ENV=development
-API_BASE_URL=http://localhost:4000
+    NODE_ENV=development
+    API_BASE_URL=http://localhost:4000
    ```
 
 4. เริ่มเซิร์ฟเวอร์ backend:
@@ -105,7 +106,7 @@ API_BASE_URL=http://localhost:4000
 ### การตั้งค่า Frontend
 1. นำทางไปยังไดเรกทอรี Front-end:
    ```
-   cd IsTS/Front-end
+   cd IsTS/IsTS_back
    ```
 
 2. ติดตั้ง dependencies:
